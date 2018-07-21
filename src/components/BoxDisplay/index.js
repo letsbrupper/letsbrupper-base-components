@@ -5,17 +5,17 @@ import Theme from '../../theme';
 import remCalc from '../../helpers/remCalc';
 
 const SCBoxDisplay = styled.div`
-  background: ${props => props.bgColor || '#eee'},
-  fontSize: '11px',
-  marginBottom: '10px',
-  minHeight: '2rem',
-  lineHeight: '2rem',
-  borderWidth: '1px',
-  borderStyle: 'solid',
-  borderColor: ${props => props.borderColor || '#c6c6c6'},
-  textAlign: 'center',
-  color: ${props => props.color || '#000'},
-  fontFamily: ${Theme.fonts.families.AvenirBook}
+  background: ${props => props.bgColor ? props.bgColor : '#eee'};
+  font-size: 11px;
+  margin-bottom: 10px;
+  min-height: 2rem;
+  line-height: 2rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${props => props.borderColor ? props.borderColor : '#c6c6c6'};
+  text-align: center;
+  color: ${props => props.color ? props.color : '#000'};
+  font-family: ${Theme.fonts.families.AvenirBook};
 `;
 
 const BoxDisplay = (props) => {

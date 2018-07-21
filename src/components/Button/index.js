@@ -19,19 +19,19 @@ const ButtonBackground = styled.div`
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: ${Theme.colors.BRUPPER_PURPLE_0};
+  background: ${Theme.colors.pupple_0};
   background: -webkit-linear-gradient(right,
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+    ${Theme.colors.blue}, ${Theme.colors.pupple},
+    ${Theme.colors.blue}, ${Theme.colors.pupple});
   background: -o-linear-gradient(right,
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+    ${Theme.colors.blue}, ${Theme.colors.pupple},
+    ${Theme.colors.blue}, ${Theme.colors.pupple});
   background: -moz-linear-gradient(right,
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+    ${Theme.colors.blue}, ${Theme.colors.pupple},
+    ${Theme.colors.blue}, ${Theme.colors.pupple});
   background: linear-gradient(right,
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
-    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+    ${Theme.colors.blue}, ${Theme.colors.pupple},
+    ${Theme.colors.blue}, ${Theme.colors.pupple});
   top: 0;
   left: -100%;
   -webkit-transition: all 0.4s;
@@ -44,7 +44,7 @@ const ButtonContent = styled.button`
   font-family: Open Sans;
   font-weight: 500;
   font-size: 15px;
-  color: ${Theme.colors.WHITE};
+  color: ${Theme.colors.white};
   line-height: 1.2;
   text-transform: uppercase;
   display: -webkit-box;
