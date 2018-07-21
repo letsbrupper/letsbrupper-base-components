@@ -10,7 +10,8 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "lint": "eslint . --ext .js,.jsx",
-    "style": "styleguidist server --open",
+    "styleguide": "styleguidist server --open",
+    "build:styleguide": "styleguidist build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
