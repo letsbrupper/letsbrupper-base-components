@@ -4,80 +4,99 @@ import styled from 'styled-components';
 import Theme from '../../theme';
 import remCalc from '../../helpers/remCalc';
 
-const SCButton = styled.a`
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease-out;
-  text-align: center;
-  font-family: ${Theme.fonts.families.AvenirHeavy};
-  min-width: 100%;
-  max-height: ${remCalc(40)};
-  height: ${remCalc(40)};
-  width: auto;
-  padding: ${remCalc(8.8)} ${remCalc(40)};
-  border-radius: ${remCalc(20)};
-  border-width: 2px;
-  border-style: solid;
-  border-color: ${Theme.colors.brupperBlue};
-  font-size: ${remCalc(16)};
-  line-height: initial;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  user-select: none;
-  ${Theme.media.md`
-    min-width: ${remCalc(100)};
-    border-width: 1px;
-  `}
-  color: ${Theme.colors.white};
-  background-color: ${Theme.colors.brupperBlue};
+const ButtonContainer = styled.div`
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
-  &:hover {
-    color: ${Theme.colors.black};
-    background-color: ${Theme.colors.grey};
+const ButtonBackground = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: ${Theme.colors.BRUPPER_PURPLE_0};
+  background: -webkit-linear-gradient(right,
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+  background: -o-linear-gradient(right,
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+  background: -moz-linear-gradient(right,
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+  background: linear-gradient(right,
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE},
+    ${Theme.colors.BRUPPER_BLUE}, ${Theme.colors.BRUPPER_PURPLE});
+  top: 0;
+  left: -100%;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+`;
+
+const ButtonContent = styled.button`
+  font-family: Open Sans;
+  font-weight: 500;
+  font-size: 15px;
+  color: ${Theme.colors.WHITE};
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none !important;
+`;
+
+const ButtonWrapper = styled.div`
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  &:hover ${ButtonBackground} {
+    left: 0;
   }
 `;
 
 const Button = (props) => {
   return (
-    <SCButton
-      className={props.className}
-      id={props.id}
-      href={props.href}
-      target={props.target}
-      title={props.title}
-      tabIndex={props.tabIndex}
-      disabled={props.disabled}
-    >
-      {props.children}
-    </SCButton>
+    <ButtonContainer>
+      <ButtonWrapper>
+        <ButtonBackground></ButtonBackground>
+        <ButtonContent>
+          {props.children}
+        </ButtonContent>
+      </ButtonWrapper>
+    </ButtonContainer>
   );
-
 };
 
-Button.defaultProps = {
-  disabled: false
-};
+// Button.defaultProps = {
+//   disabled: false
+// };
 
 Button.propTypes = {
   /** Button text */
-  children: PropTypes.node,
-  /** Extra class to apply to element */
-  className: PropTypes.string,
-  /** ID of button */
-  id: PropTypes.string,
-  /** The link for the button tag */
-  href: PropTypes.string,
-  /** Set the target of the link */
-  target: PropTypes.string,
-  /** Add a title to the link */
-  title: PropTypes.string,
-  /** Set the tab index */
-  tabIndex: PropTypes.number,
-  /** Event to fire when component is clicked */
-  onClick: PropTypes.func,
-  /** Disable button */
-  disabled: PropTypes.bool,
+  children: PropTypes.node
 };
+
 export default Button;
