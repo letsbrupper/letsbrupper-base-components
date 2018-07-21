@@ -5,6 +5,7 @@ This is set of base components using in Letsbrupper.com
 Thanks to the series of tutorials:
 - https://blog.cloudboost.io/create-a-react-application-from-scratch-part-1-introduction-b2e66dfb3aae
 - https://www.valentinog.com/blog/webpack-tutorial/
+- https://www.robinwieruch.de/react-eslint-webpack-babel/
 which helps us intial the project
 
 # Setup ESLint for Atom
