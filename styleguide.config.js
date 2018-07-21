@@ -9,5 +9,6 @@ const getTitle = () => {
 
 module.exports = {
   title: getTitle(),
+  skipComponentsWithoutExample: true,
   components: 'src/components/*/index.js'
 }
