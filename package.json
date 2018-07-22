@@ -7,11 +7,11 @@
     "lint"
   ],
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "styleguidist server --open",
     "build": "webpack --mode production",
     "lint": "eslint . --ext .js,.jsx",
-    "styleguide": "styleguidist server --open",
-    "build:styleguide": "styleguidist build",
+    "styleguide": "styleguidist build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

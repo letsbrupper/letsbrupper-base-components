@@ -7,10 +7,10 @@ This is set of base components using in Letsbrupper.com
 
 # Build & Install
 - Install: `$ npm install`
-- Run: `$ npm start`
+- Run styleguide: `$ npm start`
 - Build: `$ npm run build`
-- Run styleguide: `$ npm run styleguide`
-- Build styleguide: `$ npm run build:styleguide`
+- Build styleguide: `$ npm run styleguide`
+- Run Webpack Dev: `$ npm run dev`
 - Check lint: `$ npm run lint`
 
 # Guideline
