@@ -1,5 +1,3 @@
-import App from "./App";
-import style from "./main.css";
 import Button from './components/Button';
 import BoxDisplay from './components/BoxDisplay';
 import Column from './components/Column';

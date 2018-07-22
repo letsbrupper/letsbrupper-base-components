@@ -7,7 +7,6 @@
     "lint"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
     "start": "styleguidist server --open",
     "build": "webpack --mode production",
     "lint": "eslint . --ext .js,.jsx",

@@ -4,7 +4,7 @@ const path = require('path');
 const version = require(path.join(__dirname, 'package.json')).version;
 
 const getTitle = () => {
-  return `Letsbrupper Style Guide (${version})`;
+  return `Letsbrupper Components Style Guide (${version})`;
 };
 
 const getSections = () => {
