@@ -1,4 +1,4 @@
-# Project web-base-components
+# Project letsbrupper-base-components
 This is set of base components using in Letsbrupper.com
 
 # Prerequisite

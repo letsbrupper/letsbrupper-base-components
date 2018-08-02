@@ -1,16 +1,19 @@
 {
-  "name": "web-base-components",
+  "name": "letsbrupper-base-components",
   "version": "1.0.0",
-  "description": "Web base components using in Letsbrupper.com",
-  "main": "index.js",
+  "description": "Letsbrupper base components using in Letsbrupper.com",
+  "main": "dist/index.js",
   "pre-commit": [
     "lint"
   ],
   "scripts": {
     "start": "styleguidist server --open",
-    "build": "webpack --mode production",
-    "lint": "eslint . --ext .js,.jsx",
     "styleguide": "styleguidist build",
+    "webpack": "webpack --mode production",
+    "webpack.dev": "webpack-dev-server --mode development --open",
+    "lint": "eslint . --ext .js,.jsx",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -46,6 +49,10 @@
     "webpack-dev-server": "^3.1.4",
     "prop-types": "^15.6.2",
     "styled-components": "^3.3.3"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "dependencies": {}
 }
