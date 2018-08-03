@@ -17,6 +17,7 @@ Thanks to the series of tutorials:
 - https://blog.cloudboost.io/create-a-react-application-from-scratch-part-1-introduction-b2e66dfb3aae
 - https://www.valentinog.com/blog/webpack-tutorial/
 - https://www.robinwieruch.de/react-eslint-webpack-babel/
+- https://medium.com/dailyjs/building-a-react-component-with-webpack-publish-to-npm-deploy-to-github-guide-6927f60b3220
 which helps us initiate the project
 
 # Setup ESLint for Atom
